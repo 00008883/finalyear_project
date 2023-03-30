@@ -9,7 +9,6 @@ class DMSApp(ctk.CTk):
         super().__init__()
 
         self.geometry(f"{1280}x{720}")
-        self.title("BeHealth DMS")
 
         self.frame_side = ctk.CTkFrame(master=self, width=140, corner_radius=0)
         self.frame_side.grid(row=0, column=0, rowspan=4, sticky="nsew")
@@ -18,7 +17,10 @@ class DMSApp(ctk.CTk):
         self.frame_main.grid(row=0, column=1, padx=(20, 20), pady=20)
         self.frame_buttons = ctk.CTkFrame(master=self)
         self.frame_buttons.grid(row=1, column=1, padx=(20, 20), pady=(20, 0))
+        self.project_name = "HVision"
 
+        # Title of the window
+        self.title(self.project_name + " DMS")
 
         self.faceID_state = "normal"
         self.switch_faceId = ctk.StringVar(value="on")
@@ -28,7 +30,7 @@ class DMSApp(ctk.CTk):
         self.switch = ctk.CTkSwitch(master=self.frame_side, text="Enable Face ID", command=self.enableFaceSwitch, variable=self.switch_faceId,
                                     onvalue="on", offvalue="off")
         self.switch.grid(row=1, column=0, padx=10, pady=(100, 10))
-        self.logo_label = ctk.CTkLabel(self.frame_side, text="BeHealth",
+        self.logo_label = ctk.CTkLabel(self.frame_side, text=self.project_name,
                                                  font=ctk.CTkFont(size=20, weight="bold"), width= 200)
         self.logo_label.grid(row=0, column=0, padx=20, pady=(20, 10))
         self.sidebar_button = ctk.CTkButton(self.frame_side, text="EXIT", height=40, command=self.sidebar_button_event)
@@ -36,7 +38,7 @@ class DMSApp(ctk.CTk):
 
         # MAIN INTERFACE GRID
         # Main label
-        self.title_label = ctk.CTkLabel(self.frame_main, text="BeHealth Driver Monitoring System",
+        self.title_label = ctk.CTkLabel(self.frame_main, text=self.project_name + " Driver Monitoring System",
                                         font=ctk.CTkFont(size=30, weight="bold"))
         self.title_label.grid(padx=350, pady=100)
 
