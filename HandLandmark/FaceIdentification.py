@@ -1,7 +1,7 @@
 import sys
 import cv2
 from FaceRecognitionModule import FaceRec
-import main as MainFunc
+
 
 sfr = FaceRec()
 sfr.load_encoding_images("Faces/")

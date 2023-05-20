@@ -11,6 +11,7 @@ class FaceRec:
 
         # Resizing the frame
         self.frame_resizing = 0.25
+        self.face_tolerance = 0.5
 
     def load_encoding_images(self, images_path):
         """
@@ -47,7 +48,7 @@ class FaceRec:
 
         face_names = []
         for face_encoding in face_encodings:
-            matches = face_recognition.compare_faces(self.known_face_encodings, face_encoding, tolerance= 0.5)
+            matches = face_recognition.compare_faces(self.known_face_encodings, face_encoding, tolerance= self.face_tolerance)
             name = "Unknown"
 
             # the smallest distance to the new face
