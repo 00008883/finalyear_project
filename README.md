@@ -32,7 +32,7 @@ Main monitoring system consists of 6 parts: Hand detection module, Pose detectio
 
 ## Images
 ### Logic
-![Software Logic](Images/methodology.png)
+![Software Logic](Images/logic.jpg)
 ### UI
 ![UI](Images/UI_Main.png)
 ### FaceID System
