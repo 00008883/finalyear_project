@@ -1,6 +1,6 @@
 # HVision - Advanced Driver Monitoring System
 
-<img src="Images/logo.jpg" width="300">
+<img src="Images/logo.jpg" width="800" height="500">
 
 **HVision** is a project undertaken as part of BSc (Hons) Business
 Information Systems Degree, Westminster International University in Tashkent. 
